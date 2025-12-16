@@ -1,0 +1,14 @@
+{
+  "name": "js-reaction-game",
+  "version": "1.0.0",
+  "description": "Space Reflex - A reaction game",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@libsql/client": "^0.15.15",
+    "dotenv": "^17.2.3"
+  }
+}

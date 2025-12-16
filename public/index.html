@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="images/favi_icon.png" />
+    <title>Space Reflex</title>
+    <link rel="preload" as="image" href="images/vol_icon_muted.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="screen">
+      <main>
+        <p id="title">STOP ON<span id="target_color"></span></p>
+        <div id="level_title">ROUND 1</div>
+        <div id="lives">
+          <span><img src="images/favi_icon.png" /></span>
+          <span><img src="images/favi_icon.png" /></span>
+          <span><img src="images/favi_icon.png" /></span>
+        </div>
+        <button id="main_game_button">
+          <span id="button_text">START</span>
+        </button>
+        <button id="restart" class="toggle_display">RESTART</button>
+        <section id="timer_container">
+          <div id="timer_label">MISSION TIME</div>
+          <div id="timer">00:00</div>
+        </section>
+      </main>
+
+      <!-- Leaderboard (Desktop) -->
+      <div id="leaderboard_container">
+        <div id="leaderboard" class="leaderboard-table">
+          <h3>GLOBAL TOP 10</h3>
+          <table id="scores">
+            <thead>
+              <tr>
+                <th>RANK</th>
+                <th>NAME</th>
+                <th>TIME</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <button id="toggle_leaderboard_btn" class="btn btn-panel">
+          Hide High Scores
+        </button>
+        <div id="user_badge" class="hidden">
+          <span id="username_display"></span>
+          <button id="change_name_btn" title="Change Name">↻</button>
+        </div>
+        <div id="volume_slider_container">
+          <span id="mute_volume"
+            ><img id="volume_display" src="images/vol_icon.png"
+          /></span>
+          <input type="range" id="volume_slider" min="0" max="100" value="30" />
+        </div>
+      </div>
+
+      <!-- Mobile Leaderboard Button -->
+      <button id="mobile_leaderboard_btn">LEADERBOARD</button>
+    </div>
+
+    <!-- Mobile Leaderboard Modal -->
+    <div id="leaderboard_modal" class="modal-overlay hidden">
+      <div
+        id="leaderboard_modal_content"
+        class="modal-content leaderboard-table"
+      >
+        <h3>GLOBAL TOP 10</h3>
+        <table id="modal_scores">
+          <thead>
+            <tr>
+              <th>RANK</th>
+              <th>NAME</th>
+              <th>TIME</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <div id="user_badge_mobile" class="hidden">
+          <span id="username_display_mobile"></span>
+          <button id="change_name_btn_mobile" title="Change Name">↻</button>
+        </div>
+        <button id="close_leaderboard_modal" class="btn btn-panel">
+          Hide Leaderboard
+        </button>
+      </div>
+    </div>
+
+    <div id="instructions_overlay" class="modal-overlay">
+      <div id="instructions_modal" class="modal-content">
+        <h2 class="mission-objective">mission objective</h2>
+        <ul>
+          <li>Match the target color as colors cycle rapidly</li>
+          <li>
+            Click/Tap to pause at the perfect moment, tap/click again to resume
+          </li>
+          <li>
+            Complete 8 rounds within 45 seconds! You have 3 lives!
+            <span><img src="images/favi_icon.png" /></span>
+          </li>
+          <li>Check the leaderboard to see if you made the top 10!</li>
+        </ul>
+        <form id="user_form" class="form-container">
+          <label for="player_name_input">User Name:</label>
+          <input
+            type="text"
+            id="player_name_input"
+            name="player_name_input"
+            class="form-input"
+            placeholder="astronot99"
+            minlength="2"
+            maxlength="12"
+          />
+          <span id="name_rules">
+            2-12 characters, letters & numbers only, must include a letter
+          </span>
+          <button type="submit" id="close_instructions" class="btn btn-primary">
+            GOT IT
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Change Name Warning Modal -->
+    <div id="change_name_modal" class="modal-overlay hidden">
+      <div class="modal-content warning-modal">
+        <h2 class="warning-title">WARNING</h2>
+        <p class="warning-message">
+          If your score has been added to the leaderboard, you will lose access
+          to this username permanently.
+        </p>
+        <p class="warning-question">Are you sure you want to proceed?</p>
+        <div class="warning-buttons">
+          <button id="confirm_change_name" class="btn btn-danger">
+            YES, CHANGE ID
+          </button>
+          <button id="cancel_change_name" class="btn btn-secondary">
+            CANCEL
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>
