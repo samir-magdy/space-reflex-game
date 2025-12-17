@@ -969,3 +969,208 @@ body.game-over {
     transform: translateX(-50%) scale(1.05);
   }
 }
+
+@media (max-width: 400px) {
+  * {
+    font-size: clamp(16px, 2.5vw, 16px);
+  }
+
+  main {
+    padding: 1rem 0.75rem 0;
+    margin-top: 1rem;
+  }
+
+  #title {
+    font-size: clamp(1.5rem, 5vw, 1.8rem);
+    max-width: 100%;
+  }
+
+  #level_title {
+    font-size: clamp(1.5rem, 5vw, 1.8rem);
+  }
+
+  #lives {
+    padding-top: 0.3em;
+    padding-left: 0.5em;
+  }
+
+  #lives img {
+    width: 1.8rem;
+    margin-left: 0.3em;
+  }
+
+  #target_color {
+    font-size: clamp(1.1rem, 3vw, 1.4rem);
+    padding: 0.4rem 0.7rem;
+    margin: 0.2em auto;
+  }
+
+  #main_game_button {
+    width: clamp(280px, 90vw, 340px);
+    height: clamp(240px, 50vw, 300px);
+    border-radius: 15px;
+    margin-top: 0.4em;
+  }
+
+  #button_text {
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
+  }
+
+  #timer_container {
+    top: 1.5rem !important;
+    left: 50% !important;
+    transform: translateX(-50%);
+    padding: 0.3rem 0.5rem;
+    padding-bottom: 0.1rem;
+  }
+
+  #timer_label {
+    font-size: clamp(0.8rem, 2vw, 1.2rem);
+    margin-bottom: 0.1rem;
+    padding-bottom: 0.3rem;
+  }
+
+  #timer {
+    font-size: clamp(2rem, 8vw, 3.5rem);
+  }
+
+  .game-message {
+    font-size: clamp(2rem, 8vw, 3rem);
+    padding: 0.3rem 0.7rem;
+    width: 88%;
+    margin-top: 3rem;
+  }
+
+  .modal-content {
+    padding: 1.2rem;
+    width: 92%;
+    max-width: 340px;
+  }
+
+  .mission-objective {
+    font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+    margin-bottom: 0.6rem;
+    margin-left: 0.5rem;
+  }
+
+  #instructions_modal li {
+    font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+    padding: 0.4rem 0;
+    padding-left: 1.2rem;
+  }
+
+  #instructions_modal li img {
+    height: 1.1em;
+  }
+
+  .form-input {
+    padding: 0.6rem 0.8rem;
+    font-size: clamp(16px, 2.5vw, 0.95rem);
+  }
+
+  #user_form {
+    margin-top: 1rem;
+  }
+
+  #user_form label {
+    font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+  }
+
+  .name-error {
+    font-size: clamp(0.75rem, 2.5vw, 0.9rem);
+    padding: 0.4rem 0.7rem;
+    margin-top: -0.3rem;
+  }
+
+  .warning-title {
+    font-size: clamp(1.4rem, 5vw, 1.8rem);
+    margin-bottom: 0.8rem;
+  }
+
+  .warning-message {
+    font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+    margin-bottom: 0.7rem;
+  }
+
+  .warning-question {
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    margin-bottom: 1rem;
+  }
+
+  .btn-danger,
+  .btn-secondary {
+    padding: 0.6rem 1.5rem;
+    font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+  }
+
+  .btn-primary {
+    padding: 0.6rem 1.8rem;
+    font-size: clamp(0.85rem, 2.5vw, 1rem);
+  }
+
+  #name_rules {
+    font-size: clamp(0.7rem, 2.5vw, 0.75rem);
+  }
+
+  #restart {
+    top: 102%;
+    padding: 0.3rem 0.6rem;
+    padding-top: 0.5rem;
+    font-size: clamp(0.85rem, 2.5vw, 1rem);
+  }
+
+  #user_badge_mobile {
+    margin-top: 1rem;
+    margin-bottom: 0.7rem;
+    padding: 0.5rem 0.6rem;
+  }
+
+  #username_display_mobile {
+    font-size: 0.95rem;
+  }
+
+  #change_name_btn_mobile {
+    width: 26px;
+    height: 26px;
+    font-size: 1rem;
+  }
+
+  #mobile_leaderboard_btn {
+    bottom: 0.4rem;
+    padding: 0.5rem 1.2rem;
+    font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+  }
+
+  #leaderboard_modal_content {
+    max-width: 340px;
+    padding: 1rem 1.2rem;
+  }
+
+  #leaderboard_modal h3 {
+    font-size: clamp(1.3rem, 5vw, 1.6rem);
+  }
+
+  #leaderboard_modal thead th {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.2rem;
+  }
+
+  #leaderboard_modal tbody td {
+    padding: 0.25rem 0.2rem;
+    font-size: clamp(0.75rem, 2.5vw, 0.85rem);
+  }
+
+  #leaderboard_modal table {
+    min-height: 16rem;
+    margin-bottom: 1rem;
+  }
+
+  #close_leaderboard_modal {
+    padding: 0.5rem 0.6rem;
+    font-size: 0.95rem;
+  }
+
+  #close_instructions {
+    margin-top: 0.3rem;
+  }
+}
