@@ -1,6 +1,6 @@
 ## About
 
-This project is an arcade-themed reaction game I built while learning JavaScript. The goal of the game is to try and stop a cycling color sequence on the target color provided. It includes 8 rounds, with time intervals between color cycling decreasing between each round. It also includes a persistent and 'smart' high-score leaderboard system deployed Turso's serverless SQLite.
+This project is an arcade-themed reaction game I built while learning JavaScript. The goal of the game is to try and stop a cycling color sequence on the target color provided. It includes 8 rounds, with time intervals between color cycling decreasing between each round. It also includes a persistent and 'smart' high-score leaderboard system deployed on Turso's serverless SQLite.
 
 **Live Demo: <a>https://space-reflex-game.onrender.com/</a>**
 
